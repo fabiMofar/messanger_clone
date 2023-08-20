@@ -15,19 +15,19 @@ interface InputProps {
 }
 
 const Input: React.FC<InputProps> = ({
-                                         label,
-                                         id,
-                                         type,
-                                         required,
-                                         register,
-                                         errors,
-                                         disabled
-                                     }) => {
+    label,
+    id,
+    type,
+    required,
+    register,
+    errors,
+    disabled
+}) => {
     return (
         <div>
             <label
                 htmlFor={id}
-                className="block text-sm font-medium leading-6 text-gray-900"
+                className="block text-sm font-medium leading-6 text-white"
             >
                 {label}
             </label>
@@ -49,16 +49,17 @@ const Input: React.FC<InputProps> = ({
                         shadow-sm
                         ring-1
                         ring-inset
-                        ring-gray-300
                         placeholder:text-gray-400
                         focus:ring-2
                         focus:ring-inset
                         focus:ring-sky-600
                         sm:text-sm
                         sm:leading-6
+                        bg-gray-600
+                        ring-gray-600
                     `,
-                        errors[id] && "focus:ring-rose-500",
-                        disabled && "opacity-50 cursor-default"
+                    errors[id] && "focus:ring-rose-500",
+                    disabled && "opacity-50 cursor-default"
                     )}
                 />
             </div>
